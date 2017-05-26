@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图淡入淡出</title> 
+
+	<style>
+	</style>
+</head> 
+<body> 
+
+</body>
+</html> 
+
+<script>
+"use strict";
+//把自己的事代理给另外一个对象
+function Person(name,id,dog){
+	this.name=name;
+	this.id=id;
+	this.gatedog=dog;
+}
+Person.prototype.lockdoor=function(){
+	this.gatedog.lockdoor(5);
+}
+function Dog(name){
+	this.name=name;
+}
+Dog.prototype.lockdoor=function(count){
+	console.log(this.name+"聚精会神的看着大门，盯了"+count+"天，她累了")
+}
+let d1=new Dog("小李");
+let p1=new Person("007","蒋泽明",d1);
+p1.lockdoor();
+</script>
